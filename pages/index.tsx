@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Typed from "react-typed";
 import { AiFillInstagram, AiFillLinkedin, AiFillMail } from "react-icons/ai";
-import { Header } from "./components/header";
+import Header from "./components/header";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";

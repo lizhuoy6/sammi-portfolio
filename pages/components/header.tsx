@@ -21,7 +21,7 @@ const NAVIGATION_ITEMS = [
   { title: "About", link: "/about" },
 ];
 
-export const Header: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <div className="border-b py-4">
       <div className="container mx-auto max-w-5xl px-4">
@@ -81,3 +81,5 @@ const NavItem: React.FC<{ navItem: NavItemModel }> = ({ navItem }) => {
     </li>
   );
 };
+
+export default Header;
