@@ -23,7 +23,7 @@ const NAVIGATION_ITEMS = [
 
 const Header: React.FC = () => {
   return (
-    <div className="border-b py-4">
+    <div className="py-4">
       <div className="container mx-auto max-w-5xl px-4">
         <div className="flex place-content-between items-center">
           <div className="text-5xl font-medium signature">Sammi</div>

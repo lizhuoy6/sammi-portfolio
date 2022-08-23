@@ -5,7 +5,6 @@ import { AiFillInstagram, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import Header from "./components/header";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
-import Image from "next/image";
 
 const TAB_ITEMS = [
   { title: "School Projects", id: "school" },
@@ -50,7 +49,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="border-t">
+      <div>
         <div className="container mx-auto max-w-5xl px-4 py-8">
           <ul className="flex place-content-between">
             {TAB_ITEMS.map((item) => (
