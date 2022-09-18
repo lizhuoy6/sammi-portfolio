@@ -201,48 +201,8 @@ const Home: NextPage = () => {
               <div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://i.imgur.com/tJz1RTy.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/XMyof6Y.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/tJz1RTy.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/XMyof6Y.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
+                  src="/images/fortickets_thumbnail.png"
+                  alt="ForTickets"
                   className="w-fill"
                 />
               </div>
