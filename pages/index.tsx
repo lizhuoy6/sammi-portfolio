@@ -37,14 +37,10 @@ const Home: NextPage = () => {
               loop
             />
           </div>
-          <div className="pt-6 text-gray-500 max-w-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+          <div className="pt-6 text-xl text-gray-500 max-w-2xl">
+            I am a graduate student at the University of Toronto studying UXD. I
+            am passionate about creating user-centered products that are
+            accessible and inclusive.
           </div>
         </div>
       </div>
@@ -198,7 +194,7 @@ const Home: NextPage = () => {
 
           {currentTab === "personal" ? (
             <div className="pt-6 flex flex-col space-y-10">
-              <div>
+              <div className="hover:scale-105 transition-all">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/images/fortickets_thumbnail.png"
