@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
+import { HiMenu } from "react-icons/hi";
 
 const NAVIGATION_ITEMS = [
   { title: "Home", link: "/" },
@@ -22,13 +23,38 @@ const NAVIGATION_ITEMS = [
 ];
 
 const Header: React.FC = () => {
+  const [mobileNavShown, setMobileNavShown] = useState(false);
+
   return (
     <div className="py-4">
       <div className="container mx-auto max-w-5xl px-4">
         <div className="flex place-content-between items-center">
           <div className="text-5xl font-medium signature">Sammi</div>
-          <div>
+          <div className="hidden md:block">
             <ul className="flex space-x-10">
+              {NAVIGATION_ITEMS.map((item) => (
+                <NavItem key={item.title} navItem={item} />
+              ))}
+            </ul>
+          </div>
+          <div
+            className="block md:hidden text-3xl"
+            onClick={() => setMobileNavShown(!mobileNavShown)}
+          >
+            <HiMenu />
+          </div>
+          <div
+            className={`md:hidden ${
+              mobileNavShown ? "left-0 opacity-50" : "-left-full opacity-0"
+            } fixed w-full h-full top-0 bg-black z-9 duration-300 transition-opacity`}
+            onClick={() => setMobileNavShown(false)}
+          ></div>
+          <div
+            className={`md:hidden ${
+              mobileNavShown ? "left-0" : "-left-full"
+            } fixed w-9/12 h-full top-0 bg-white z-10 transition-all duration-300`}
+          >
+            <ul>
               {NAVIGATION_ITEMS.map((item) => (
                 <NavItem key={item.title} navItem={item} />
               ))}
@@ -68,7 +94,7 @@ const NavItem: React.FC<{ navItem: NavItemModel }> = ({ navItem }) => {
         {navItem.children ? <BsChevronDown className="text-gray-500" /> : null}
       </div>
       {navItem.children && showChildren ? (
-        <div className="absolute bg-white px-6 -left-2 pt-2 w-auto whitespace-nowrap">
+        <div className="md:absolute bg-white px-6 -left-2 pt-2 w-auto whitespace-nowrap">
           <ul>
             {navItem.children.map((child) => (
               <li key={child.title} className="pt-2">
