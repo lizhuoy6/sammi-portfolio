@@ -5,6 +5,7 @@ import { AiFillInstagram, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import Header from "./components/header";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
+import Image from "next/image";
 
 const TAB_ITEMS = [
   { title: "School Projects", id: "school" },
@@ -196,10 +197,12 @@ const Home: NextPage = () => {
             <div className="pt-6 flex flex-col space-y-10">
               <div className="hover:scale-105 transition-all">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src="/images/fortickets_thumbnail.png"
                   alt="ForTickets"
-                  className="w-fill"
+                  layout="responsive"
+                  width="3840"
+                  height="1920"
                 />
               </div>
             </div>
