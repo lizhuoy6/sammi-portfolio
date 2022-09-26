@@ -54,7 +54,7 @@ const Header: React.FC = () => {
               mobileNavShown ? "left-0" : "-left-full"
             } fixed w-9/12 h-full top-0 bg-white z-10 transition-all duration-300`}
           >
-            <ul>
+            <ul className={"pt-20 text-2xl"}>
               {NAVIGATION_ITEMS.map((item) => (
                 <NavItem key={item.title} navItem={item} />
               ))}
@@ -85,7 +85,7 @@ const NavItem: React.FC<{ navItem: NavItemModel }> = ({ navItem }) => {
       onMouseLeave={() => setShowChildren(false)}
       className="pl-4 relative"
     >
-      <div className="flex flex-row space-x-2 items-center">
+      <div className="flex flex-row space-x-2 items-center pt-10 md:pt-0">
         {navItem.link ? (
           <Link href={navItem.link}>{navItem.title}</Link>
         ) : (
@@ -97,7 +97,7 @@ const NavItem: React.FC<{ navItem: NavItemModel }> = ({ navItem }) => {
         <div className="md:absolute bg-white px-6 -left-2 pt-2 w-auto whitespace-nowrap">
           <ul>
             {navItem.children.map((child) => (
-              <li key={child.title} className="pt-2">
+              <li key={child.title} className="md:pt-2 pt-5">
                 <Link href={child.link}>{child.title}</Link>
               </li>
             ))}
