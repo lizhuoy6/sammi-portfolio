@@ -6,6 +6,7 @@ import Header from "./components/header";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";
+import fortickets_thumbnail from "../public/images/fortickets_thumbnail.png";
 
 const TAB_ITEMS = [
   { title: "School Projects", id: "school" },
@@ -196,14 +197,16 @@ const Home: NextPage = () => {
           {currentTab === "personal" ? (
             <div className="pt-6 flex flex-col space-y-10">
               <div className="hover:scale-105 transition-all">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <Image
-                  src="/images/fortickets_thumbnail.png"
-                  alt="ForTickets"
-                  layout="responsive"
-                  width="3840"
-                  height="1920"
-                />
+                <a href="/files/ForTickets Case Study.pdf" target="__blank">
+                  <Image
+                    src={fortickets_thumbnail}
+                    alt="ForTickets"
+                    layout="responsive"
+                    width="3840"
+                    height="1920"
+                    placeholder="blur"
+                  />
+                </a>
               </div>
             </div>
           ) : null}
