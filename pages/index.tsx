@@ -203,9 +203,9 @@ const Home: NextPage = () => {
                   return (
                     <div
                       className="hover:scale-105 transition-all"
-                      key={project.name}
+                      key={project.id}
                     >
-                      <a href={project.link} target="__blank">
+                      <a href={`/projects/${project.id}`} target="__blank">
                         <Image
                           src={project.coverImage}
                           alt={project.name}
