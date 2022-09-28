@@ -9,13 +9,13 @@ import Image from "next/image";
 import { projects } from "../data/projects";
 
 const TAB_ITEMS = [
-  { title: "School Projects", id: "school" },
-  { title: "Work Experiences", id: "work" },
+  // { title: "School Projects", id: "school" },
+  // { title: "Work Experiences", id: "work" },
   { title: "Personal Projects", id: "personal" },
 ];
 
 const Home: NextPage = () => {
-  const [currentTab, setCurrentTab] = useState("school");
+  const [currentTab, setCurrentTab] = useState("personal");
 
   return (
     <div>
@@ -63,162 +63,37 @@ const Home: NextPage = () => {
               </li>
             ))}
           </ul>
-
-          {currentTab === "school" ? (
-            <div className="pt-6 flex flex-col space-y-10">
-              <div className="hover:scale-105 transition-all">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/tJz1RTy.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/tJz1RTy.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/XMyof6Y.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/tJz1RTy.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/XMyof6Y.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-            </div>
-          ) : null}
-
-          {currentTab === "work" ? (
-            <div className="pt-6 flex flex-col space-y-10">
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/tJz1RTy.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/XMyof6Y.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/tJz1RTy.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/XMyof6Y.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-              <div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://i.imgur.com/aSj1ZhN.png"
-                  alt="my app"
-                  className="w-fill"
-                />
-              </div>
-            </div>
-          ) : null}
-
-          {currentTab === "personal" ? (
-            <div className="pt-6 flex flex-col space-y-10">
-              {projects
-                .filter((project) => project.projectType === "personal")
-                .map((project) => {
-                  return (
-                    <div
-                      className="hover:scale-105 transition-all"
-                      key={project.id}
-                    >
-                      <a href={`/projects/${project.id}`} target="__blank">
-                        <Image
-                          src={project.coverImage}
-                          alt={project.name}
-                          layout="responsive"
-                          width="1920"
-                          height="960"
-                          placeholder="blur"
-                        />
-                      </a>
-                    </div>
-                  );
-                })}
-            </div>
-          ) : null}
+          {TAB_ITEMS.map((item) => {
+            if (item.id === currentTab) {
+              return (
+                <div key={item.id} className="pt-6 flex flex-col space-y-10">
+                  {projects
+                    .filter((project) => project.projectType === item.id)
+                    .map((project) => {
+                      return (
+                        <div
+                          className="hover:scale-105 transition-all"
+                          key={project.id}
+                        >
+                          <a href={`/projects/${project.id}`} target="__blank">
+                            <Image
+                              src={project.coverImage}
+                              alt={project.name}
+                              layout="responsive"
+                              width="1920"
+                              height="960"
+                              placeholder="blur"
+                            />
+                          </a>
+                        </div>
+                      );
+                    })}
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
       </div>
 
