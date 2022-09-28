@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Project, projects } from "../data/projects";
+import { Project, projects } from "../../data/projects";
 
 export async function getStaticPaths() {
   const paths = projects.map((project) => ({

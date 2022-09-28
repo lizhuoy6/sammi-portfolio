@@ -6,8 +6,7 @@ import Header from "./components/header";
 import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";
-import fortickets_thumbnail from "../public/images/fortickets_thumbnail.png";
-import { projects } from "./data/projects";
+import { projects } from "../data/projects";
 
 const TAB_ITEMS = [
   { title: "School Projects", id: "school" },
