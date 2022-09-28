@@ -7,6 +7,7 @@ import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";
 import fortickets_thumbnail from "../public/images/fortickets_thumbnail.png";
+import { projects } from "./data/projects";
 
 const TAB_ITEMS = [
   { title: "School Projects", id: "school" },
@@ -196,18 +197,27 @@ const Home: NextPage = () => {
 
           {currentTab === "personal" ? (
             <div className="pt-6 flex flex-col space-y-10">
-              <div className="hover:scale-105 transition-all">
-                <a href="/files/ForTickets Case Study.pdf" target="__blank">
-                  <Image
-                    src={fortickets_thumbnail}
-                    alt="ForTickets"
-                    layout="responsive"
-                    width="3840"
-                    height="1920"
-                    placeholder="blur"
-                  />
-                </a>
-              </div>
+              {projects
+                .filter((project) => project.projectType === "personal")
+                .map((project) => {
+                  return (
+                    <div
+                      className="hover:scale-105 transition-all"
+                      key={project.name}
+                    >
+                      <a href={project.link} target="__blank">
+                        <Image
+                          src={project.coverImage}
+                          alt={project.name}
+                          layout="responsive"
+                          width="1920"
+                          height="960"
+                          placeholder="blur"
+                        />
+                      </a>
+                    </div>
+                  );
+                })}
             </div>
           ) : null}
         </div>
