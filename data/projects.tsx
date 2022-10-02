@@ -31,6 +31,7 @@ import fortickets_slide_027 from "../public/images/fortickets/fortickets_slide_0
 import fortickets_slide_028 from "../public/images/fortickets/fortickets_slide_028.png";
 import fortickets_slide_029 from "../public/images/fortickets/fortickets_slide_029.png";
 import fortickets_slide_030 from "../public/images/fortickets/fortickets_slide_030.png";
+// import notestorm_thumbnail from "../public/images/notestorm_thumbnail.png";
 
 export interface Project {
   id: string;
@@ -82,4 +83,11 @@ export const projects: Project[] = [
       fortickets_slide_030,
     ],
   },
+  // {
+  //   id: "notestorm",
+  //   projectType: "personal",
+  //   name: "NoteStorm",
+  //   coverImage: notestorm_thumbnail,
+  //   slides: [],
+  // },
 ];

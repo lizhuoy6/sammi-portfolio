@@ -9,7 +9,7 @@ const NAVIGATION_ITEMS = [
     title: "Work",
     children: [
       { title: "Projects", link: "/projects" },
-      { title: "Resume", link: "/resume" },
+      { title: "Resume", link: "/files/Sammi Resume.pdf" },
     ],
   },
   {
