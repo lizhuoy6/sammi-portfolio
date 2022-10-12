@@ -2,7 +2,6 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import MainLayout from "../layouts/main";
-import Image from "next/image";
 
 const Home: NextPage = () => {
   const [showStage1, setShowStage1] = useState(false);
