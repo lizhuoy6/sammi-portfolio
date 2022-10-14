@@ -48,6 +48,7 @@ function Project({
     subtitle: string;
     figmaLink: string;
     pdfLink: string;
+    sideImageLink: string;
   };
 }) {
   return (
@@ -57,9 +58,14 @@ function Project({
       </Head>
       <MainLayout>
         <div className="container mx-auto max-w-5xl px-4">
+          <img
+            width="300"
+            className="float-right mt-20 hidden md:inline-block"
+            src={meta.sideImageLink}
+          ></img>
           <h1 className="text-5xl pt-20 pb-5">{meta.title}</h1>
           <div className="text-xl pb-10">{meta.subtitle}</div>
-          <div className="pb-10 flex flex-col md:flex-row gap-5">
+          <div className="pb-10 flex flex-col md:flex-row gap-5 mb-5 md:mb-20">
             <a
               href={meta.figmaLink}
               className="flex flex-row gap-2 items-center bg-black px-6 py-4 rounded-xl cursor-pointer hover:scale-105 transition-all"

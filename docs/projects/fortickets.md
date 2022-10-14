@@ -4,6 +4,7 @@ author: Zhuoying Li
 subtitle: Movie ticketing app with capability to split the bill with your friends.
 figmaLink: https://www.figma.com/file/hLaqJFv31PT1FOssRFkEo5/ForTickets?node-id=0%3A1
 pdfLink: /files/ForTickets Case Study.pdf
+sideImageLink: /images/fortickets/SideImage.png
 ---
 
 ## Project Overview
