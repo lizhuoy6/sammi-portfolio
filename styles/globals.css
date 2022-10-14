@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Jost:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&family=Jost:wght@400;500;700&display=swap");
 
 body {
-    font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 .signature {
-    font-family: 'Allura', cursive;
+  font-family: "Allura", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
 }
