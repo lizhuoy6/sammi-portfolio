@@ -151,28 +151,36 @@ The paper wireframes are created with ease of use in mind, and provides user a i
 
 **1. Movie Detail Screen**
 
-1. Existing movie ticketing apps doesn’t allow users to mark movies as their favourites or watched.
-2. It is important to have large “Buy Ticket” button as it is the primary action a user wants to take.
+- Existing movie ticketing apps doesn’t allow users to mark movies as their favourites or watched.
+- It is important to have large “Buy Ticket” button as it is the primary action a user wants to take.
 
 ![](/images/fortickets/MovieDetailsDigital.png)
 
 **2. Payment Screen**
 
-1. Users want to confirm ticket details before paying so they are more confident.
-2. Allowing users to purchase food in advance allows Cinemas to plan inventory ahead, while reducing the line at the cinema.
+- Users want to confirm ticket details before paying so they are more confident.
+- Allowing users to purchase food in advance allows Cinemas to plan inventory ahead, while reducing the line at the cinema.
 
 ![](/images/fortickets/ConfirmationDigital.png)
 
 **3. Split the Bill Screen**
 
-1. Users want to split the bill with their friends.
-2. Allowing user's friends to scan the QR code to pay their portion.
+- Users want to split the bill with their friends.
+- Allowing user's friends to scan the QR code to pay their portion.
 
 ![](/images/fortickets/SplitTheBillsDigital.png)
 
 **4. Seat Selection Screen**
 
-1. Shows the best viewing zone so users can select best seats easily.
-2. Allows users to select seats based on view, accessibility, and different zones.
+- Shows the best viewing zone so users can select best seats easily.
+- Allows users to select seats based on view, accessibility, and different zones.
 
 ![](/images/fortickets/SeatSelectionDigital.png)
+
+## Lo-Fi Prototype
+
+![](/images/fortickets/LoFiPrototype.png)
+
+## Usability Test
+
+You can find the usability test plan <a href="https://docs.google.com/document/d/1XmET-60nRwxeIPesOcoFfo8igGYIfdWIxqW-MARvcJ0/edit?usp=sharing" target="__blank">here</a>.
