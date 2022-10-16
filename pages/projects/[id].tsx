@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MainLayout from "../../layouts/main";
 import Head from "next/head";
 import fs from "fs";

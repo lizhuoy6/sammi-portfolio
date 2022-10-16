@@ -183,4 +183,63 @@ The paper wireframes are created with ease of use in mind, and provides user a i
 
 ## Usability Test
 
+### Plan
+
 You can find the usability test plan <a href="https://docs.google.com/document/d/1XmET-60nRwxeIPesOcoFfo8igGYIfdWIxqW-MARvcJ0/edit?usp=sharing" target="__blank">here</a>.
+
+### Result
+
+You can find the raw interview data <a href="/files/ForTickets Usability Study Notes.pdf" target="__blank">here</a>.
+
+### Affinity Diagram
+
+After conducted a usability study to understand how to improve the movie ticket app. Here are some observations and quotes that were collected during the research.
+
+![](/images/fortickets/AffinityDiagram1.png)
+
+![](/images/fortickets/AffinityDiagram2.png)
+
+### Summary
+
+I conducted two rounds of studies. The first round helped me to design the wireframes and a low-fidelity prototype. And the second round of study helped me to refine my high-fidelity prototype.
+
+**Round 1 findings:**
+
+- Split the bill button is hard to find
+- Hard to search for movies
+- Not easy to spot food ordering option
+
+**Round 2 findings:**
+
+- Separate food ordering page doesn’t make sense
+- Cannot add more than one ticket
+- Cannot order food after purchasing a ticket
+
+## Mockups
+
+![](/images/fortickets/Mockups1.png)
+
+![](/images/fortickets/Mockups2.png)
+
+## Asscessibility Considerations
+
+- Use detailed imagery for movie and food so users can better understand what they are purchasing.
+- Use icons to make navigation easier.
+- Use contrasting colors to make text easier to read for all users.
+
+## Evaluation and Next Steps
+
+### Take Aways
+
+**Impact:**
+
+This project solved some real problems that many of us faces, such as splitting the bill and purchasing food for your movie. Just like one of my pair have said: “I really wish these features can be baked into every movie app I have today”.
+
+**What I learned:**
+
+When designing the ForTickets app, I learned that the first ideas of the app are only the start of the process. Usability studies and user research impacts each iteration of my app’s design.
+
+### Next Steps
+
+1. Conduct another round of usability studies to validate whether the pain points user experienced have been effectively addressed.
+2. Conduct more rounds and different types of user research to determine any new areas of need.
