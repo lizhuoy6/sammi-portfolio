@@ -7,7 +7,9 @@ const Footer: React.FC = () => {
         <div className="text-gray-400 text-xl">Let&lsquo;s get connected!</div>
         <ul className="flex space-x-4 text-3xl text-gray-400 justify-center pt-6">
           <li className="hover:text-gray-500">
-            <AiFillInstagram />
+            <a href="https://www.instagram.com/itsmytyp/" target="__blank">
+              <AiFillInstagram />
+            </a>
           </li>
           <li className="hover:text-gray-500">
             <a href="mailto:lizhuoy6@gmail.com">
