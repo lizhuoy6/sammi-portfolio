@@ -32,6 +32,8 @@ Conduct user research, build wireframes, low-fidelity and high-fidelity prototyp
 
 ## User Research
 
+<img src="/images/fortickets/userresearch.png" style="float: right" width="400" />
+
 ### Research Goals
 
 1. To understand user needs and frustrations as they relate to the movie ticket app I’m designing.
@@ -104,6 +106,8 @@ Primble is a uber driver who loves watching movies in the theater. One day, he w
 You can also see the user journey maps <a href="https://docs.google.com/presentation/d/1rWDzOFcCPbihcDvvTwJefLQ2FWnHeF5zN710AiEdlfU/edit?usp=sharing" target="__blank">here</a>.
 
 ### Problem Statements Based on Personas
+
+<img src="/images/fortickets/problemstatements.png" style="float: right" width="400" />
 
 1. Christina is a high school student who needs to split the bill easily with her friend because she usually pre-pay the tickets for the group.
 2. Patrick is a film critic who needs to know the exact release time of the latest movie because his studio wants to review it at the first second.
@@ -238,7 +242,9 @@ User can directly purchase a ticket using this app.
 - After confirming their payment method, the ticket is purchased.
 - User can view the tickets on tickets page.
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<img src="/images/fortickets/wallet.png" width="300" />
+
+<br/><br/><br/>
 
 ### Flow 2
 
@@ -254,7 +260,9 @@ User can also split their bill with their friends.
 - Configure some parameters.
 - Other users can then scan the QR code to pay their part.
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<img src="/images/fortickets/splitbill.png" width="300" />
+
+<br/><br/><br/>
 
 ### Flow 3
 
@@ -269,7 +277,9 @@ User can share purchased tickets with others.
 - Select the ticket they want to share.
 - Enter a phone number and click share.
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<img src="/images/fortickets/sharewithfriend.png" width="300" />
+
+<br/><br/><br/>
 
 ## Asscessibility Considerations
 

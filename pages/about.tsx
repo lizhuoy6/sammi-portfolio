@@ -16,14 +16,9 @@ const Home: NextPage = () => {
         <div className="py-20 pb-80 mb-40">
           <div className="container mx-auto max-w-5xl px-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/photo.jpg"
-              alt="sammi photo"
-              width={400}
-              className="float-right ml-6"
-            />
             <div className="text-6xl pb-4">About Me</div>
-            <div className="pt-6 text-xl text-gray-500 max-w-2xl">
+            <div className="pt-6 text-xl text-gray-500">
+              <img src="/images/13.png" width="400" className="float-right" />
               Hi there, I&lsquo;m Sammi!
               <br />
               <b>tl;dr</b>: I am a UX designer in Toronto, Canada.
@@ -37,7 +32,7 @@ const Home: NextPage = () => {
               )}
             </div>
             <div
-              className={`pt-6 text-xl text-gray-500 max-w-2xl ${
+              className={`pt-20 text-xl text-gray-500 ${
                 showStage1 ? "block" : "hidden"
               }`}
             >
@@ -63,13 +58,19 @@ const Home: NextPage = () => {
             </div>
             <div>
               <div
-                className={`pt-6 text-xl text-gray-500 max-w-2xl ${
+                className={`pt-40 text-xl text-gray-500 ${
                   showStage2 ? "block" : "hidden"
                 }`}
               >
                 <p>
                   <b>Background</b>
                 </p>
+                <img
+                  src="/images/photo.jpg"
+                  alt="sammi photo"
+                  width={400}
+                  className="float-right ml-6"
+                />
                 <p className="pt-4">
                   I graduated from UTSC in June 2022, and I am currently
                   pursuing my master&lsquo;s degree in User Experience Design at
