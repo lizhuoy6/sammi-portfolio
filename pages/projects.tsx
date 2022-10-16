@@ -19,30 +19,12 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Sammi Li</title>
+        <title>Projects - Sammi Li</title>
       </Head>
       <MainLayout>
         <div className="py-20">
           <div className="container mx-auto max-w-5xl px-4">
-            <div className="text-6xl pb-4">Hi I&lsquo;m Sammi Li!</div>
-            <div className="text-4xl text-gray-600">
-              <Typed
-                strings={[
-                  "I am a student",
-                  "I am a UX designer",
-                  "I am a bunny lover",
-                  "I am an angel",
-                ]}
-                typeSpeed={40}
-                backSpeed={50}
-                loop
-              />
-            </div>
-            <div className="pt-6 text-xl text-gray-500 max-w-2xl">
-              I am a graduate student at the University of Toronto studying UXD.
-              I am passionate about creating user-centered products that are
-              accessible and inclusive.
-            </div>
+            <div className="text-6xl pb-4">Projects</div>
           </div>
         </div>
         <div>

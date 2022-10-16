@@ -6,19 +6,10 @@ import { HiMenu } from "react-icons/hi";
 const NAVIGATION_ITEMS = [
   { title: "Home", link: "/" },
   {
-    title: "Work",
-    children: [
-      { title: "Projects", link: "/projects" },
-      { title: "Resume", link: "/files/Sammi Resume.pdf" },
-    ],
+    title: "Projects",
+    link: "/projects",
   },
-  {
-    title: "Study",
-    children: [
-      { title: "UofT", link: "/uoft" },
-      { title: "Google UX Certificate", link: "/google-ux-certificate" },
-    ],
-  },
+  { title: "Resume", link: "/files/Sammi Resume.pdf" },
   { title: "About", link: "/about" },
 ];
 
