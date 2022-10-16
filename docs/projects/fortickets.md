@@ -221,6 +221,54 @@ I conducted two rounds of studies. The first round helped me to design the wiref
 
 ![](/images/fortickets/Mockups2.png)
 
+## Hi-Fi Prototype
+
+### Flow 1
+
+<img src="/images/fortickets/HiFiFlow1.gif" width="250" style="float: right" />
+
+**Directly purchasing a ticket**
+
+User can directly purchase a ticket using this app.
+
+- User first chooses a movie on the home page.
+- Then they select their preferred seats.
+- After confirming their payment method, the ticket is purchased.
+- User can view the tickets on tickets page.
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+### Flow 2
+
+<img src="/images/fortickets/HiFiFlow2.gif" width="250" style="float: right" />
+
+**Split the bill with friends**
+
+User can also split their bill with their friends.
+
+- User first chooses a movie on the home page.
+- Then they select their preferred seats.
+- Click on split the bill.
+- Configure some parameters.
+- Other users can then scan the QR code to pay their part.
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+### Flow 3
+
+<img src="/images/fortickets/HiFiFlow3.gif" width="250" style="float: right" />
+
+**Share tickets with others**
+
+User can share purchased tickets with others.
+
+- User first visit tickets page.
+- Then choose share tickets.
+- Select the ticket they want to share.
+- Enter a phone number and click share.
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
 ## Asscessibility Considerations
 
 - Use detailed imagery for movie and food so users can better understand what they are purchasing.
