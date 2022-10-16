@@ -165,7 +165,7 @@ const PostWrapper = styled.div`
 const TocWrapper = styled.div`
   position: sticky;
   align-self: flex-start;
-  top: 20px;
+  top: 120px;
   min-width: 200px;
   margin-left: -40px;
   ul {

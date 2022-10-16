@@ -6,6 +6,9 @@ export default function MainLayout({ children }: React.PropsWithChildren) {
   return (
     <>
       <Header />
+      <br />
+      <br />
+      <br />
       <main>{children}</main>
       <Footer />
     </>

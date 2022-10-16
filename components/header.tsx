@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   const [mobileNavShown, setMobileNavShown] = useState(false);
 
   return (
-    <div className="py-4">
+    <div className="py-4 fixed w-full bg-white/[.8] z-50 backdrop-blur-md">
       <div className="container mx-auto max-w-5xl px-4">
         <div className="flex place-content-between items-center">
           <div className="text-5xl font-medium signature">
