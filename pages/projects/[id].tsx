@@ -88,7 +88,7 @@ function Project({
           </div>
           <div className="flex flex-row gap-10">
             <TocWrapper className="hidden md:block">
-              <Toc markdownText={markdown} />
+              <Toc markdownText={markdown} lowestHeadingLevel={2} />
             </TocWrapper>
             <PostWrapper dangerouslySetInnerHTML={{ __html: content }} />
           </div>
