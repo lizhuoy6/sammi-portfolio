@@ -217,6 +217,8 @@ I conducted two rounds of studies. The first round helped me to design the wiref
 
 ## Mockups
 
+From the affinity diagram, I identified some usability issues, and fixed two of the most important ones (P0s).
+
 ![](/images/fortickets/Mockups1.png)
 
 ![](/images/fortickets/Mockups2.png)
