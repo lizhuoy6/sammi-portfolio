@@ -86,9 +86,16 @@ const Home: NextPage = () => {
                 </p>
                 <p className="pt-4">
                   After obtaining my bachelor&lsquo;s degree, I spent my whole
-                  summer learning the Google UX certificate in Coursera to get
-                  some initial understanding of how UX design processes work in
-                  a professional setting.
+                  summer learning the{" "}
+                  <a
+                    href="https://www.coursera.org/account/accomplishments/professional-cert/93CBRTL38JB7"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
+                    Google UX certificate
+                  </a>
+                  &nbsp;in Coursera to get some initial understanding of how UX
+                  design processes work in a professional setting.
                 </p>
                 <p className="pt-4">
                   <b>Why UX?</b>
