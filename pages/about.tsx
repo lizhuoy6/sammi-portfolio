@@ -24,7 +24,7 @@ const Home: NextPage = () => {
               <b>tl;dr</b>: I am a UX designer in Toronto, Canada.
               {!showStage1 && (
                 <button
-                  className="block pt-4"
+                  className="block pt-4 underline"
                   onClick={() => setShowStage1(true)}
                 >
                   Read more?
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
               </p>
               {!showStage2 && showStage1 && (
                 <button
-                  className="block pt-4"
+                  className="block pt-4 underline"
                   onClick={() => setShowStage2(true)}
                 >
                   Want to read even more?
@@ -90,6 +90,7 @@ const Home: NextPage = () => {
                   <a
                     href="https://www.coursera.org/account/accomplishments/professional-cert/93CBRTL38JB7"
                     target={"_blank"}
+                    className="underline"
                     rel="noreferrer"
                   >
                     Google UX certificate
