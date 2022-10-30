@@ -30,8 +30,7 @@ const Home: NextPage = () => {
                 strings={[
                   "I am a student",
                   "I am a UX designer",
-                  "I am a bunny lover",
-                  "I am an angel",
+                  "I am a UX researcher",
                 ]}
                 typeSpeed={40}
                 backSpeed={50}
