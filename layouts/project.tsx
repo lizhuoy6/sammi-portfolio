@@ -1,55 +1,51 @@
-import MainLayout from "../../layouts/main";
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { Remarkable } from "remarkable";
-import HeaderIdsPlugin from "remarkable-header-ids";
-import Toc from "react-toc";
+import MainLayout from "./main";
 import styled from "styled-components";
+import Toc from "react-toc";
+import { renderToString } from "react-dom/server";
 
-export async function getStaticPaths() {
-  const fileNames = fs.readdirSync("docs/projects");
-  const slugs = fileNames.map((fileName) => fileName.replace(/\.md$/, ""));
-  const paths = slugs.map((slug) => ({
-    params: { id: slug },
-  }));
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }: { params: { id: string } }) {
-  const fullPath = path.join("docs/projects", `${params.id}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
-  const md = new Remarkable().use(HeaderIdsPlugin());
-  md.set({ html: true });
-
-  return {
-    props: {
-      meta: data,
-      markdown: content,
-      content: md.render(content),
-    },
-  };
-}
-
-function Project({
-  meta,
-  markdown,
-  content,
-}: {
-  content: string;
-  markdown: string;
+interface ProjectLayoutProps extends React.PropsWithChildren {
   meta: {
     title: string;
     author: string;
-    subtitle: string;
+    subtitles: string[];
     figmaLink: string;
     pdfLink: string;
     sideImageLink: string;
   };
-}) {
+}
+
+const ProjectLayout = ({ children, meta }: ProjectLayoutProps) => {
+  const contentString = renderToString(children as any);
+
+  /**
+   * Get a list of h2 tags from the content string
+   * Used to construct the TOC.
+   */
+  const getHeadings = (
+    source: string
+  ): Array<{ text: string; link: string }> => {
+    const regex = /<h1>(.*?)<\/h1>/g;
+
+    if (source.match(regex)) {
+      return source.match(regex)!.map((heading) => {
+        const headingText = heading.replace("<h1>", "").replace("</h1>", "");
+
+        const link = "#" + headingText.replace(/ /g, "_").toLowerCase();
+
+        return {
+          text: headingText,
+          link,
+        };
+      });
+    }
+
+    return [];
+  };
+
+  const headings = getHeadings(contentString);
+
   return (
     <>
       <Head>
@@ -61,9 +57,16 @@ function Project({
             width="300"
             className="float-right mt-20 hidden md:inline-block"
             src={meta.sideImageLink}
+            alt="side image"
           ></img>
           <h1 className="text-5xl pt-20 pb-5">{meta.title}</h1>
-          <div className="text-xl pb-10">{meta.subtitle}</div>
+          <div className="pb-5">
+            {meta.subtitles.map((subtitle) => (
+              <div className="text-xl pb-2" key={subtitle}>
+                {subtitle}
+              </div>
+            ))}
+          </div>
           <div className="pb-10 flex flex-col md:flex-row gap-5 mb-5 md:mb-20">
             <a
               href={meta.figmaLink}
@@ -72,6 +75,7 @@ function Project({
               <img
                 width={40}
                 src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=670&h=670&q=75&fit=max&auto=format"
+                alt=""
               />
               <div className="text-xl text-white">Figma Prototype</div>
             </a>
@@ -82,23 +86,34 @@ function Project({
               <img
                 width={40}
                 src="https://cdn4.iconfinder.com/data/icons/file-extensions-1/64/pdfs-512.png"
+                alt=""
               />
               <div className="text-xl text-white">Download PDF</div>
             </a>
           </div>
           <div className="flex flex-row gap-10">
-            <TocWrapper className="hidden md:block">
-              <Toc markdownText={markdown} lowestHeadingLevel={2} />
+            <TocWrapper className="hidden md:block pt-6">
+              <ul>
+                {headings.map((heading) => {
+                  return (
+                    <li key={heading.text}>
+                      <a href={heading.link}>{heading.text}</a>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <Toc markdownText={"test"} lowestHeadingLevel={2} />
             </TocWrapper>
-            <PostWrapper dangerouslySetInnerHTML={{ __html: content }} />
+            <PostWrapper>{children}</PostWrapper>
           </div>
         </div>
       </MainLayout>
     </>
   );
-}
+};
 
-export default Project;
+export default ProjectLayout;
 
 const PostWrapper = styled.div`
   h1 {
@@ -165,13 +180,14 @@ const PostWrapper = styled.div`
 const TocWrapper = styled.div`
   position: sticky;
   align-self: flex-start;
-  top: 120px;
+  top: 80px;
   min-width: 200px;
   margin-left: -40px;
   ul {
     margin-left: 20px;
   }
   li {
+    padding-bottom: 10px;
     a {
       color: rgba(0, 0, 0, 0.5) !important;
       &:hover {
