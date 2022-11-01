@@ -1,4 +1,5 @@
 import ProjectLayout from "../../layouts/project";
+import { Carousel } from 'react-responsive-carousel';
 
 export const meta = {
   title: "ForTickets",
@@ -22,6 +23,8 @@ I decided to design a movie ticketing app that solves both problems.
 
 <div className="text-4xl text-bold py-6">How can I design a solution that makes my movie watching experience more enjoyable?</div>
 
+<br/><br/><br/>
+
 # Research
 
 ## Background Research
@@ -37,7 +40,14 @@ what are the problems they face when they go to a movie. And we found some reall
 
 ![](/images/fortickets/often-split-bill-graph.png)
 
+And after collecting and organizing my interview notes, I found that a lot of users have the need to split the bill with their friends, and just like
+our quantitative data suggests, they feel nervous when they need to leave their seat mid-movie.
+
+![](/images/fortickets/interview-results.png)
+
 At this point, the need is clear, we need to have a solution **that reduces the axiety of leaving the seat mid-movie, and also offers a more convinent way to split the bill among friends**.
+
+
 
 Then I did some competitive analysis to see what existing products are out there that solves these problems.
 
@@ -53,6 +63,7 @@ And it turns out
 
 ![](/images/fortickets/competitive-analysis.png)
 
+<br/><br/>
 
 ## User Analysis
 
@@ -66,50 +77,16 @@ And it turns out
 
 Based on my research findings, I built two personas to stay anchored on the users to avoid letting our desire for features trump the user's need.
 
-#### Christina Lee
+<Carousel showThumbs={true}>
+    <div>
+        <img src="/images/fortickets/ChristinaLee.png" />
+    </div>
+    <div>
+        <img src="/images/fortickets/PimbleGraham.png" />
+    </div>
+</Carousel>
 
-![](/images/fortickets/ChristinaLee.png)
-
-#### Pimble Graham
-
-![](/images/fortickets/PimbleGraham.png)
-
-### Craft User Story
-
-**User story one: Christina Lee**
-
-Christina is a high school student who usually watches the movie with her friends after school. They usually split the bill, however, most ticketing apps don’t have this functionality built in. So they have to use third-party solutions. She also needs to share the ticket with her friends so they can keep a copy, at the moment she usually just do a screenshot and send it to her friends.
-
-**User story three: Primble Graham**
-
-Primble is a uber driver who loves watching movies in the theater. One day, he watches a movie in the theatre and feels hungry. He then goes out and orders some popcorn and coke lines up for over 10 minutes and misses the scene where the protagonist got shot. He has to rewatch the movie again at home.
-
-You can also see the user journey maps <a href="https://docs.google.com/presentation/d/1rWDzOFcCPbihcDvvTwJefLQ2FWnHeF5zN710AiEdlfU/edit?usp=sharing" target="__blank">here</a>.
-
-### Problem Statements Based on Personas
-
-<img
-  src="/images/fortickets/problemstatements.png"
-  style={{ float: "right" }}
-  width="400"
-/>
-
-1. Christina is a high school student who needs to split the bill easily with her friend because she usually pre-pay the tickets for the group.
-3. Pimble is a uber driver who needs to purchase popcorn and coke during a movie because he might miss important action if he go out and buy food.
-
-### Craft User Storyboard
-
-**Scenario:** Movie Ticket App
-
-**Christina** is a high school student **who needs** to split the bill easily with her friend **because** she usually pre-pays the tickets for the group.
-
-#### Big Picture Storyboard
-
-![](/images/fortickets/BigPictureStoryboard.png)
-
-#### Close-up Storyboard
-
-![](/images/fortickets/CloseUpStoryboard.png)
+<br/><br/><br/>
 
 # Design
 
@@ -126,67 +103,72 @@ However, this idea is quickly scrapped as many people found it to be basically s
 
 So I came up with the second solution which became the final design.
 
-<div className="text-2xl py-4 font-bold">An app that allow users to order food within their seat, and allow group of people to buy tickets and split the bill directly.</div>
+<div className="text-2xl py-6 font-bold">An app that allow users to order food within their seat, and allow group of people to buy tickets and split the bill directly.</div>
 
-With this in mind, I started to design the user flows.
 
-## User Flow
+<br/><br/>
 
-![](/images/fortickets/UserFlow.png)
+### User Flow
+With this in mind, I started to design the user flows and also made couple of storyboards to better understand how users will navigate this app.
 
-## Paper Wireframe
+<Carousel showThumbs={false}>
+    <div>
+        <img src="/images/fortickets/UserFlow.png" />
+    </div>
+    
+</Carousel>
+
+<br/><br/>
+
+### Storyboards
+
+<Carousel showThumbs={true}>
+<div>
+        <img src="/images/fortickets/BigPictureStoryboard.png" />
+    </div>
+    <div>
+        <img src="/images/fortickets/CloseUpStoryboard.png" />
+    </div>
+</Carousel>
+
+<br/><br/>
+
+## Wireframes
+
+After I finished the user flows, I started to design the wireframes.
 
 The paper wireframes are created with ease of use in mind and provides user an instantly familiar interface for ordering movie tickets.
 
 ![](/images/fortickets/PaperWireframe.png)
 
-## Digital Wireframe
+<Carousel showThumbs={true}>
+<div>
+        <img src="/images/fortickets/mockup-1.png" />
+    </div>
+    <div>
+        <img src="/images/fortickets/mockup-2.png" />
+    </div>
+    <div>
+        <img src="/images/fortickets/mockup-3.png" />
+    </div>
+    <div>
+        <img src="/images/fortickets/mockup-4.png" />
+    </div>
+</Carousel>
 
-**1. Movie Detail Screen**
-
-- Existing movie ticketing apps doesn’t allow users to mark movies as their favourites or watched.
-- It is important to have large “Buy Ticket” button as it is the primary action a user wants to take.
-
-![](/images/fortickets/MovieDetailsDigital.png)
-
-**2. Payment Screen**
-
-- Users want to confirm ticket details before paying so they are more confident.
-- Allowing users to purchase food in advance allows Cinemas to plan inventory ahead while reducing the line at the cinema.
-
-![](/images/fortickets/ConfirmationDigital.png)
-
-**3. Split the Bill Screen**
-
-- Users want to split the bill with their friends.
-- Allowing users' friends to scan the QR code to pay their portion.
-
-![](/images/fortickets/SplitTheBillsDigital.png)
-
-**4. Seat Selection Screen**
-
-- Shows the best viewing zone so users can select the best seats easily.
-- Allows users to select seats based on the view, accessibility, and different zones.
-
-![](/images/fortickets/SeatSelectionDigital.png)
+<br/><br/>
 
 ## Lo-Fi Prototype
 
+Then I utilized Figma to create a lo-fi prototype so I can test my design with some real users.
+
 ![](/images/fortickets/LoFiPrototype.png)
 
-## Usability Test
+<br/><br/>
 
-### Plan
+## Usability Test & Iteration
 
-You can find the usability test plan <a href="https://docs.google.com/document/d/1XmET-60nRwxeIPesOcoFfo8igGYIfdWIxqW-MARvcJ0/edit?usp=sharing" target="__blank">here</a>.
-
-### Result
-
-You can find the raw interview data <a href="/files/ForTickets Usability Study Notes.pdf" target="__blank">here</a>.
-
-### Summary
-
-I conducted two rounds of studies. The first round helped me to design the wireframes and a low-fidelity prototype. And the second round of study helped me to refine my high-fidelity prototype.
+I conducted a usability test with 5 users, and here are some of the findings.
 
 **Round 1 findings:**
 
@@ -200,15 +182,17 @@ I conducted two rounds of studies. The first round helped me to design the wiref
 - Cannot add more than one ticket
 - Cannot order food after purchasing a ticket
 
-## Mockups
-
-From the affinity diagram, I identified some usability issues, and fixed two of the most important ones (P0s).
+Given these findings, I updated my prototype.
 
 ![](/images/fortickets/Mockups1.png)
 
 ![](/images/fortickets/Mockups2.png)
 
+<br/><br/>
+
 ## Hi-Fi Prototype
+
+Finally, I created a hi-fi prototype using Figma.
 
 ### Flow 1
 
@@ -280,11 +264,15 @@ User can share purchased tickets with others.
 <br />
 <br />
 
+<br/><br/>
+
 ## Asscessibility Considerations
 
 - Use detailed imagery for movie and food so users can better understand what they are purchasing.
 - Use icons to make navigation easier.
 - Use contrasting colors to make text easier to read for all users.
+
+<br/><br/>
 
 ## Evaluation and Next Steps
 

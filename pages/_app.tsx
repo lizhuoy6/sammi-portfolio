@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { MDXProvider } from "@mdx-js/react";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { renderToString } from "react-dom/server";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const CustomH1 = (
   props: DetailedHTMLProps<
@@ -17,7 +18,7 @@ const CustomH1 = (
 
   return (
     <h1
-      className="sticky top-20 bg-white pb-4 pt-4 mb-0 mt-0 pl-2 -ml-2"
+      className="sticky top-20 z-50 bg-white pb-4 pt-4 mb-0 mt-0 pl-2 -ml-2"
       id={id}
       {...props}
     />
