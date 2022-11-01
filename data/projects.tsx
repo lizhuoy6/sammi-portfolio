@@ -1,5 +1,5 @@
 import { StaticImageData } from "next/image";
-import fortickets_thumbnail from "../public/images/fortickets_thumbnail.png";
+import fortickets_thumbnail from "../public/images/cover.png";
 import fortickets_slide_000 from "../public/images/fortickets/fortickets_slide_000.png";
 import fortickets_slide_001 from "../public/images/fortickets/fortickets_slide_001.png";
 import fortickets_slide_002 from "../public/images/fortickets/fortickets_slide_002.png";
