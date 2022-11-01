@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { MDXProvider } from "@mdx-js/react";
@@ -22,9 +24,15 @@ const CustomH1 = (
   );
 };
 
+const CustomImg = (
+  props: DetailedHTMLProps<HTMLAttributes<HTMLImageElement>, HTMLImageElement>
+) => {
+  return <img {...props} />;
+};
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <MDXProvider components={{ h1: CustomH1 }}>
+    <MDXProvider components={{ h1: CustomH1, img: CustomImg }}>
       <Component {...pageProps} />
     </MDXProvider>
   );
