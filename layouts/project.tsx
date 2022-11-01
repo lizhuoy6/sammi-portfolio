@@ -99,7 +99,7 @@ const ProjectLayout = ({ children, meta }: ProjectLayoutProps) => {
             )}
           </div>
           <div className="flex flex-row gap-10">
-            <TocWrapper className="hidden md:block pt-6">
+            <TocWrapper className="hidden lg:block pt-6">
               <ul>
                 {headings.map((heading) => {
                   return (
