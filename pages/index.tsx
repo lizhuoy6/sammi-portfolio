@@ -38,9 +38,7 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="pt-6 text-xl text-gray-500 max-w-2xl">
-              I am a graduate student at the University of Toronto studying UXD.
-              I am passionate about creating user-centered products that are
-              accessible and inclusive.
+              Design is so simple, that&lsquo;s why it is so complicated.
             </div>
           </div>
         </div>
