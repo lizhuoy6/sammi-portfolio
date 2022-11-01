@@ -26,20 +26,6 @@ const Home: NextPage = () => {
         </div>
         <div>
           <div className="container mx-auto max-w-5xl px-4 py-8">
-            <ul className="flex place-content-between">
-              {TAB_ITEMS.map((item) => (
-                <li
-                  key={item.id}
-                  onClick={() => setCurrentTab(item.id)}
-                  className={`cursor-pointer ${
-                    currentTab === item.id ? "text-black" : "text-gray-400"
-                  }`}
-                >
-                  <div className="text-xl">{item.title}</div>
-                  {currentTab === item.id ? <BsChevronDown /> : null}
-                </li>
-              ))}
-            </ul>
             {TAB_ITEMS.map((item) => {
               if (item.id === currentTab) {
                 return (
