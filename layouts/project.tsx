@@ -53,12 +53,14 @@ const ProjectLayout = ({ children, meta }: ProjectLayoutProps) => {
       </Head>
       <MainLayout>
         <div className="container mx-auto max-w-5xl px-4">
-          <img
-            width="300"
-            className="float-right mt-20 hidden md:inline-block"
-            src={meta.sideImageLink}
-            alt="side image"
-          ></img>
+          {meta.sideImageLink && (
+            <img
+              width="300"
+              className="float-right mt-20 hidden md:inline-block"
+              src={meta.sideImageLink}
+              alt="side image"
+            ></img>
+          )}
           <h1 className="text-5xl pt-20 pb-5">{meta.title}</h1>
           <div className="pb-5">
             {meta.subtitles.map((subtitle) => (
@@ -68,28 +70,33 @@ const ProjectLayout = ({ children, meta }: ProjectLayoutProps) => {
             ))}
           </div>
           <div className="pb-10 flex flex-col md:flex-row gap-5 mb-5 md:mb-20">
-            <a
-              href={meta.figmaLink}
-              className="flex flex-row gap-2 items-center bg-black px-6 py-4 rounded-xl cursor-pointer hover:scale-105 transition-all"
-            >
-              <img
-                width={40}
-                src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=670&h=670&q=75&fit=max&auto=format"
-                alt=""
-              />
-              <div className="text-xl text-white">Figma Prototype</div>
-            </a>
-            <a
-              href={meta.pdfLink}
-              className="flex flex-row gap-2 items-center bg-black px-6 py-4 rounded-xl cursor-pointer hover:scale-105 transition-all"
-            >
-              <img
-                width={40}
-                src="https://cdn4.iconfinder.com/data/icons/file-extensions-1/64/pdfs-512.png"
-                alt=""
-              />
-              <div className="text-xl text-white">Download PDF</div>
-            </a>
+            {meta.figmaLink && (
+              <a
+                href={meta.figmaLink}
+                className="flex flex-row gap-2 items-center bg-black px-6 py-4 rounded-xl cursor-pointer hover:scale-105 transition-all"
+              >
+                <img
+                  width={40}
+                  src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=670&h=670&q=75&fit=max&auto=format"
+                  alt=""
+                />
+
+                <div className="text-xl text-white">Figma Prototype</div>
+              </a>
+            )}
+            {meta.pdfLink && (
+              <a
+                href={meta.pdfLink}
+                className="flex flex-row gap-2 items-center bg-black px-6 py-4 rounded-xl cursor-pointer hover:scale-105 transition-all"
+              >
+                <img
+                  width={40}
+                  src="https://cdn4.iconfinder.com/data/icons/file-extensions-1/64/pdfs-512.png"
+                  alt=""
+                />
+                <div className="text-xl text-white">Download PDF</div>
+              </a>
+            )}
           </div>
           <div className="flex flex-row gap-10">
             <TocWrapper className="hidden md:block pt-6">

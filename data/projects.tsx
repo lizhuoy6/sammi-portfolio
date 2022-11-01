@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import centro_thumbnail from "../public/images/centro/cover.png";
 import fortickets_thumbnail from "../public/images/fortickets/cover.png";
 import fortickets_slide_000 from "../public/images/fortickets/fortickets_slide_000.png";
 import fortickets_slide_001 from "../public/images/fortickets/fortickets_slide_001.png";
@@ -82,6 +83,13 @@ export const projects: Project[] = [
       fortickets_slide_029,
       fortickets_slide_030,
     ],
+  },
+  {
+    id: "centro",
+    projectType: "personal",
+    name: "Centro",
+    coverImage: centro_thumbnail,
+    slides: [],
   },
   // {
   //   id: "notestorm",

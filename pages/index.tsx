@@ -10,7 +10,7 @@ import MainLayout from "../layouts/main";
 
 const TAB_ITEMS = [
   // { title: "School Projects", id: "school" },
-  { title: "Personal Projects", id: "personal" },
+  { title: "Projects", id: "personal" },
 ];
 
 const Home: NextPage = () => {

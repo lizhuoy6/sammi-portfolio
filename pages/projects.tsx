@@ -8,10 +8,7 @@ import Image from "next/image";
 import { projects } from "../data/projects";
 import MainLayout from "../layouts/main";
 
-const TAB_ITEMS = [
-  // { title: "School Projects", id: "school" },
-  { title: "Personal Projects", id: "personal" },
-];
+const TAB_ITEMS = [{ title: "Projects", id: "personal" }];
 
 const Home: NextPage = () => {
   const [currentTab, setCurrentTab] = useState("personal");
