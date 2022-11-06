@@ -2,6 +2,25 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
 import MainLayout from "../layouts/main";
+import dynamic from "next/dynamic";
+
+const Globe = dynamic(import("react-globe.gl"), { ssr: false });
+
+const N = 10;
+const arcsData = [...Array(N).keys()].map(() => ({
+  startLat: (Math.random() - 0.5) * 180,
+  startLng: (Math.random() - 0.5) * 360,
+  endLat: (Math.random() - 0.5) * 180,
+  endLng: (Math.random() - 0.5) * 360,
+  color: [
+    ["#414141ff", "#414141ff", "#414141ff", "#414141ff"][
+      Math.round(Math.random() * 3)
+    ],
+    ["#414141ff", "#414141ff", "#414141ff", "#414141ff"][
+      Math.round(Math.random() * 3)
+    ],
+  ],
+}));
 
 const Home: NextPage = () => {
   const [showStage1, setShowStage1] = useState(false);
@@ -17,19 +36,34 @@ const Home: NextPage = () => {
           <div className="container mx-auto max-w-5xl px-4">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <div className="text-6xl pb-4">About Me</div>
-            <div className="pt-6 text-xl text-gray-500">
-              <img src="/images/13.png" width="400" className="float-right" />
-              Hi there, I&lsquo;m Sammi!
-              <br />
-              <b>tl;dr</b>: I am a UX designer in Toronto, Canada.
-              {!showStage1 && (
-                <button
-                  className="block pt-4 underline"
-                  onClick={() => setShowStage1(true)}
-                >
-                  Read more?
-                </button>
-              )}
+            <div className="pt-6 text-xl text-gray-500 flex items-center">
+              <div className="flex-1">
+                Hi there, I&lsquo;m Sammi!
+                <br />
+                <b>tl;dr</b>: I am a UX designer in Toronto, Canada.
+                {!showStage1 && (
+                  <button
+                    className="block pt-4 underline"
+                    onClick={() => setShowStage1(true)}
+                  >
+                    Read more?
+                  </button>
+                )}
+              </div>
+              <div className="-mr-60 hidden md:block">
+                <Globe
+                  width={700}
+                  height={700}
+                  enablePointerInteraction={false}
+                  backgroundColor="white"
+                  globeImageUrl="https://i.imgur.com/2wBJcKB.jpg"
+                  arcsData={arcsData}
+                  arcColor={"color"}
+                  arcDashLength={() => Math.random()}
+                  arcDashGap={() => Math.random()}
+                  arcDashAnimateTime={3000}
+                />
+              </div>
             </div>
             <div
               className={`pt-20 text-xl text-gray-500 ${
@@ -37,10 +71,9 @@ const Home: NextPage = () => {
               }`}
             >
               <p>
-                I&lsquo;m a user experience designer based in Toronto, Canada.
-                I&lsquo;m comfortable working on all aspects of the product
-                lifecycle, from developing ideas to delivering production-ready
-                assets.
+                I&lsquo;m comfortable working on{" "}
+                <b>all aspects of the product lifecycle</b>, from developing
+                ideas to delivering production-ready assets.
               </p>
               <p className="pt-4">
                 I&lsquo;m passionate about improving the lives of others through
@@ -90,7 +123,7 @@ const Home: NextPage = () => {
                   <a
                     href="https://www.coursera.org/account/accomplishments/professional-cert/93CBRTL38JB7"
                     target={"_blank"}
-                    className="underline"
+                    className="underline font-bold"
                     rel="noreferrer"
                   >
                     Google UX certificate
@@ -98,7 +131,7 @@ const Home: NextPage = () => {
                   &nbsp;in Coursera to get some initial understanding of how UX
                   design processes work in a professional setting.
                 </p>
-                <p className="pt-4">
+                <p className="pt-10">
                   <b>Why UX?</b>
                 </p>
                 <p className="pt-4">
@@ -107,6 +140,36 @@ const Home: NextPage = () => {
                   like a wedding ceremony. By becoming a UX designer, I really
                   have a chance of building something that impact people&lsquo;s
                   daily lives.
+                </p>
+                <p className="pt-10">
+                  <b>Skills</b>
+                </p>
+                <p className="pt-4 align-middle">
+                  <img
+                    className="inline-block mx-2 grayscale hover:grayscale-0 transition-all"
+                    src="https://assets.stickpng.com/images/62c6bc0beee9410fe137d91e.png"
+                    width={100}
+                  />
+                  <img
+                    className="inline-block mx-2 ml-6 grayscale hover:grayscale-0 transition-all"
+                    src="https://images.ctfassets.net/c17cslxyie2i/5nFQAWGAVzQuQCtfH2Vj3X/f721e5bcdb45dda6af26063061bdff4a/Adobe_XD_logo_one_line.png"
+                    width={150}
+                  />
+                  <img
+                    className="inline-block mx-2 ml-6 grayscale hover:grayscale-0 transition-all"
+                    src="https://compucaresystems.net/wp-content/uploads/Adobe-Photoshop-Logo.png"
+                    width={150}
+                  />
+                  <img
+                    className="inline-block pt-2 mx-2 grayscale hover:grayscale-0 transition-all"
+                    src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png"
+                    width={170}
+                  />
+                  <img
+                    className="inline-block mx-2 grayscale hover:grayscale-0 transition-all"
+                    src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png"
+                    width={120}
+                  />
                 </p>
               </div>
             </div>
