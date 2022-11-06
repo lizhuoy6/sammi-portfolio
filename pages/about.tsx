@@ -6,8 +6,7 @@ import dynamic from "next/dynamic";
 
 const Globe = dynamic(import("react-globe.gl"), { ssr: false });
 
-const N = 10;
-const arcsData = [...Array(N).keys()].map(() => ({
+const arcsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(() => ({
   startLat: (Math.random() - 0.5) * 180,
   startLng: (Math.random() - 0.5) * 360,
   endLat: (Math.random() - 0.5) * 180,
