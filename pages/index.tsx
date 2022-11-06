@@ -24,21 +24,28 @@ const Home: NextPage = () => {
       <MainLayout>
         <div className="py-20">
           <div className="container mx-auto max-w-5xl px-4">
-            <div className="text-6xl pb-4">Hi I&lsquo;m Sammi Li!</div>
-            <div className="text-4xl text-gray-600">
-              <Typed
-                strings={[
-                  "I am a student",
-                  "I am a UX designer",
-                  "I am a UX researcher",
-                ]}
-                typeSpeed={40}
-                backSpeed={50}
-                loop
-              />
-            </div>
-            <div className="pt-6 text-xl text-gray-500 max-w-2xl">
-              Design is so simple, that&lsquo;s why it is so complicated.
+            <div className="flex justify-between items-center">
+              <div>
+                <div className="text-6xl pb-4">Hi I&lsquo;m Sammi Li!</div>
+                <div className="text-4xl text-gray-600">
+                  <Typed
+                    strings={[
+                      "I am a student",
+                      "I am a UX designer",
+                      "I am a UX researcher",
+                    ]}
+                    typeSpeed={40}
+                    backSpeed={50}
+                    loop
+                  />
+                </div>
+                <div className="pt-6 text-xl text-gray-500 max-w-2xl">
+                  Design is so simple, that&lsquo;s why it is so complicated.
+                </div>
+              </div>
+              <div>
+                <div className="rounded-full w-80 h-80 overflow-hidden bg-[url('/images/profile-pic.jpg')] bg-cover bg-center"></div>
+              </div>
             </div>
           </div>
         </div>
