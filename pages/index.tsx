@@ -44,7 +44,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div>
-                <div className="rounded-full w-80 h-80 overflow-hidden bg-[url('/images/profile-pic.jpg')] bg-cover bg-center"></div>
+                <div className="rounded-full w-80 h-80 overflow-hidden bg-[url('/images/profile-pic-2.jpg')] bg-cover bg-center"></div>
               </div>
             </div>
           </div>
