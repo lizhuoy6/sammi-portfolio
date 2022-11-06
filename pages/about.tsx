@@ -4,7 +4,8 @@ import { useState } from "react";
 import MainLayout from "../layouts/main";
 import dynamic from "next/dynamic";
 
-const Globe = dynamic(import("react-globe.gl"), { ssr: false });
+let Globe = () => null;
+if (typeof window !== "undefined") Globe = require("react-globe.gl").default;
 
 const arcsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(() => ({
   startLat: (Math.random() - 0.5) * 180,
