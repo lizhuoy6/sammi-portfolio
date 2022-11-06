@@ -146,7 +146,7 @@ const Home: NextPage = () => {
                 <p className="pt-4 align-middle">
                   <img
                     className="inline-block mx-2 grayscale hover:grayscale-0 transition-all"
-                    src="https://assets.stickpng.com/images/62c6bc0beee9410fe137d91e.png"
+                    src="https://i.imgur.com/R1J8Kg9.png"
                     width={100}
                   />
                   <img
@@ -157,6 +157,11 @@ const Home: NextPage = () => {
                   <img
                     className="inline-block mx-2 ml-6 grayscale hover:grayscale-0 transition-all"
                     src="https://compucaresystems.net/wp-content/uploads/Adobe-Photoshop-Logo.png"
+                    width={150}
+                  />
+                  <img
+                    className="inline-block mx-2 ml-6 grayscale hover:grayscale-0 transition-all"
+                    src="https://i.imgur.com/FXnr5Pz.png"
                     width={150}
                   />
                   <img
