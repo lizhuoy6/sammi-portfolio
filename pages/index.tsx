@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                   Design is so simple, that&lsquo;s why it is so complicated.
                 </div>
               </div>
-              <div>
+              <div className="hidden md:block">
                 <div className="rounded-full w-80 h-80 overflow-hidden bg-[url('/images/profile-pic-2.jpg')] bg-cover bg-center"></div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                       .map((project) => {
                         return (
                           <div
-                            className="hover:scale-105 transition-all"
+                            className="hover:scale-105 transition-all shadow-xl hover:shadow-2xl"
                             key={project.id}
                           >
                             <a

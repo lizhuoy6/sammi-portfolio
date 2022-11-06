@@ -2,38 +2,43 @@ import ProjectLayout from "../../layouts/project";
 import { Carousel } from 'react-responsive-carousel';
 
 export const meta = {
-  title: "ForTickets",
+  title: "Swinter",
   author: "Zhuoying Li",
   subtitles: [
-    "Challenge: Design a movie ticketing app that allows users to split the bill directly with friends.",
-    "Deliverables: Research Insights, User Flows, Persona, Wireframe, Prototype",
-    "I did this project as a part of Google UX Professional Certificate Program."
+    "Challenge: Design a mental health app for UofT students.",
+    "Deliverables: Research Insights & Prototype",
+    "I did this project as a part of our group project INF1602 at the University of Toronto."
   ],
   figmaLink:
-    "https://www.figma.com/file/hLaqJFv31PT1FOssRFkEo5/ForTickets?node-id=0%3A1",
-  pdfLink: "/files/ForTickets Case Study.pdf",
-  sideImageLink: "/images/fortickets/SideImage.png",
+    "https://www.figma.com/file/F9ejOWzpjNfvfU80dkl7VC/Multiple-Personas-Template-(Community)?node-id=202%3A147",
+  pdfLink: "/files/Swinter.pdf",
 };
 
-# Project Overview
+# Photo Gallery
 
-I am a theater goer, frequently visiting my local cinemas whenever a new movie comes out. However, during the movie,
-I often find myself craving some food or drink. And I have to leave the theater to get them, which is a hassle. I also find
-myself often paying for my friends' tickets, and we have to split the bill using cash later, which is not very convinent. So I decided to design a movie ticketing app that solves both problems.
+Captured moments from the project :).
 
-<div className="text-4xl text-bold py-6">How can I design a solution that makes my movie ticketing and watching experience more enjoyable?</div>
-
-
-
-<br/><br/><br/>
+<Carousel showThumbs={true}>
+    <div>
+        <img src="/images/swinter/photos/photo2.jpg" />
+    </div>
+        <div>
+        <img src="/images/swinter/photos/photo4.jpg" />
+    </div>
+<div>
+        <img src="/images/swinter/photos/photo1.jpg" />
+    </div>
+</Carousel>
 
 # Research
+
+We read through some papers and online articles, and identified our primary research goal:
 
 ## Background Research
 
 <small className="pb-4 block text-gray-500">I chose survey and interviews as my initial research method because I am not yet familiar with this problem space. Using these methods allows me to gain more insights without wasting much effort.</small>
 
-To better understand this problem, **I conducted a survey and some interviews with my friends.** I asked about how often do they go to a movie, and
+To better understand this problem, I conducted a survey and some interviews with my friends. I asked about how often do they go to a movie, and
 what are the problems they face when they go to a movie. And we found some really interesting results.
 
 <div className="text-2xl py-4 font-bold">55.8% of responses says they feel nervous when they need to leave their seat mid-movie.</div>
@@ -54,7 +59,7 @@ At this point, the need is clear, we need to have a solution **that reduces the 
 <small className="pb-4 block text-gray-500">A competitive analysis is done to better understand the existing market, and also to get ideas for my app.</small>
 
 
-**Then I did some competitive analysis** to see what existing products are out there that solves these problems.
+Then I did some competitive analysis to see what existing products are out there that solves these problems.
 
 * Cineplex allows users to order food directly within their seat, eliminates the need for people to leave their seats to order food.
 However it doesn't allow users to split bills directly in the app.
@@ -126,7 +131,7 @@ Based on my research findings, I built two personas to stay anchored on the user
 I first want to tackle the problem with users who feels anxious when they need to leave their seat. I found that the main reason users feel anxious is that
 they fear missing out on important actions.
 
-So the **first idea is to have a "hype map"** where we show how important each segment of the movie is.
+So the first idea is to have a "hype map" where we show how important each segment of the movie is.
 
 <div className="text-center py-4">
   <img src="/images/fortickets/hype-graph.png" className="max-w-md inline-block"/>
@@ -136,7 +141,7 @@ So the **first idea is to have a "hype map"** where we show how important each s
 
 However, this idea is quickly scrapped as many people found it to be basically spoilers for some movies.
 
-**So I came up with the second solution which became the final design.**
+So I came up with the second solution which became the final design.
 
 <div className="text-2xl py-6 font-bold">An app that allow users to order food within their seat, and allow group of people to buy tickets and split the bill directly.</div>
 
@@ -147,11 +152,9 @@ However, this idea is quickly scrapped as many people found it to be basically s
 
 After I finished the user flows, I started to design the wireframes.
 
-**The paper wireframes** are created with ease of use in mind and provides user an instantly familiar interface for ordering movie tickets.
+The paper wireframes are created with ease of use in mind and provides user an instantly familiar interface for ordering movie tickets.
 
-![](https://i.imgur.com/sMMUpeX.png)
-
-After creating the paper wireframe, I started to create some **digital wireframes.**
+![](/images/fortickets/PaperWireframe.png)
 
 <Carousel showThumbs={true}>
 <div>
@@ -181,9 +184,9 @@ Then I utilized Figma to create a lo-fi prototype so I can test my design with s
 ## Usability Test & Iteration
 
 
-I conducted a usability test **with 5 users per-round**, and here are some of the findings.
+I conducted a usability test with 5 users, and here are some of the findings.
 
-<small className="pb-4 block text-gray-500">I chose 5 users for my usability test as there isn't a lot of flows to go over, so 5 users reaches the **saturation point <sup>[*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5993836/)</sup>**.</small>
+<small className="pb-4 block text-gray-500">I chose 5 users for my usability test as there isn't a lot of flows to go over, so 5 users reaches the saturation point.</small>
 
 **Round 1 findings:**
 
@@ -226,20 +229,8 @@ User can directly purchase a ticket using this app.
 - After confirming their payment method, the ticket is purchased.
 - User can view the tickets on tickets page.
 
-{/* <img src="/images/fortickets/wallet.png" width="300" /> */}
+<img src="/images/fortickets/wallet.png" width="300" />
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 <br />
@@ -262,20 +253,8 @@ User can also split their bill with their friends.
 - Configure some parameters.
 - Other users can then scan the QR code to pay their part.
 
-{/* <img src="/images/fortickets/splitbill.png" width="300" /> */}
+<img src="/images/fortickets/splitbill.png" width="300" />
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 <br />
@@ -297,17 +276,8 @@ User can share purchased tickets with others.
 - Select the ticket they want to share.
 - Enter a phone number and click share.
 
-{/* <img src="/images/fortickets/sharewithfriend.png" width="300" /> */}
+<img src="/images/fortickets/sharewithfriend.png" width="300" />
 
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <br />
 <br />
 <br />
