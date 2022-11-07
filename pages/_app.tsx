@@ -6,6 +6,11 @@ import { MDXProvider } from "@mdx-js/react";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { renderToString } from "react-dom/server";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import mixpanel from "mixpanel-browser";
+
+mixpanel.init("94527584e70b5578ac073748c27bcdec", {
+  debug: process.env.NODE_ENV !== "production",
+});
 
 const CustomH1 = (
   props: DetailedHTMLProps<

@@ -14,6 +14,7 @@
     "@next/mdx": "^13.0.0",
     "@types/remarkable": "^2.0.3",
     "gray-matter": "^4.0.3",
+    "mixpanel-browser": "^2.45.0",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -29,6 +30,7 @@
     "three-globe": "^2.24.9"
   },
   "devDependencies": {
+    "@types/mixpanel-browser": "^2.38.0",
     "@types/node": "18.7.9",
     "@types/react": "18.0.17",
     "@types/react-dom": "18.0.6",

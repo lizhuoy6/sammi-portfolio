@@ -2,16 +2,21 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Typed from "react-typed";
 import { AiFillInstagram, AiFillLinkedin, AiFillMail } from "react-icons/ai";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import Image from "next/image";
 import { projects } from "../data/projects";
 import MainLayout from "../layouts/main";
+import mixpanel from "mixpanel-browser";
 
 const TAB_ITEMS = [{ title: "Projects", id: "personal" }];
 
 const Home: NextPage = () => {
   const [currentTab, setCurrentTab] = useState("personal");
+
+  useEffect(() => {
+    mixpanel.track("Projects page view");
+  }, []);
 
   return (
     <div>

@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MainLayout from "../layouts/main";
 import dynamic from "next/dynamic";
+import mixpanel from "mixpanel-browser";
 
 const Globe = dynamic(import("react-globe.gl"), { ssr: false });
 
@@ -24,6 +25,10 @@ const arcsData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(() => ({
 const Home: NextPage = () => {
   const [showStage1, setShowStage1] = useState(false);
   const [showStage2, setShowStage2] = useState(false);
+
+  useEffect(() => {
+    mixpanel.track("About page view");
+  }, []);
 
   return (
     <div>
