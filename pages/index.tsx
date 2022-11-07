@@ -49,7 +49,7 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="hidden md:block">
-                <div className="rounded-full w-80 h-80 overflow-hidden bg-[url('/images/profile-pic-2.jpg')] bg-cover bg-center"></div>
+                <div className="rounded-full w-80 h-80 overflow-hidden bg-[url('/images/profile-pic-4.jpg')] bg-cover bg-center"></div>
               </div>
             </div>
           </div>
