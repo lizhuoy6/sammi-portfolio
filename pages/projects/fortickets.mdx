@@ -17,9 +17,9 @@ export const meta = {
 
 # Project Overview
 
-I am a theater goer, frequently visiting my local cinemas whenever a new movie comes out. However, during the movie,
-I often find myself craving some food or drink. And I have to leave the theater to get them, which is a hassle. I also find
-myself often paying for my friends' tickets, and we have to split the bill using cash later, which is not very convinent. So I decided to design a movie ticketing app that solves both problems.
+Most people are theater goers, frequently visiting their local cinemas whenever a new movie comes out. However, during the movie,
+They find themselves craving some food or drink. And they have to leave the theater to get them, which is a hassle. Sometimes they also find
+themselves often paying for their friends' tickets, and they have to split the bill using cash later, which is not very convinent. So I decided to design a movie ticketing app that solves both problems.
 
 <div className="text-4xl text-bold py-6">How can I design a solution that makes my movie ticketing and watching experience more enjoyable?</div>
 
@@ -33,16 +33,20 @@ myself often paying for my friends' tickets, and we have to split the bill using
 
 <small className="pb-4 block text-gray-500">I chose survey and interviews as my initial research method because I am not yet familiar with this problem space. Using these methods allows me to gain more insights without wasting much effort.</small>
 
-To better understand this problem, **I conducted a survey and some interviews with my friends.** I asked about how often do they go to a movie, and
-what are the problems they face when they go to a movie. And we found some really interesting results.
+To better understand this problem, **I conducted a survey and some interviews.** I asked about how often do they go to a movie, and
+what are the problems they face when they go to a movie. And I found some really interesting results.
+
+For the survey, I recruited participants from social media sites. Because I want ideas from a broad range of people.
+
+<div className="text-2xl py-4 font-bold">42.3% of responses indicated that they always split the bill with their friends.</div>
+
+![](/images/fortickets/often-split-bill-graph-3d-2.png)
 
 <div className="text-2xl py-4 font-bold">55.8% of responses says they feel nervous when they need to leave their seat mid-movie.</div>
 
 ![](/images/fortickets/anxious-leaving-movie-3d-2.png)
 
-<div className="text-2xl py-4 font-bold">42.3% of responses indicated that they always split the bill with their friends.</div>
-
-![](/images/fortickets/often-split-bill-graph-3d-2.png)
+Then I conducted 6 interviews first, I realized that many new ideas are still being generated, so I kept going and finally end up with 8 participants.
 
 And after collecting and organizing my interview notes, I found that a lot of users have the need to split the bill with their friends, and just like
 our quantitative data suggests, they feel nervous when they need to leave their seat mid-movie.
@@ -80,18 +84,6 @@ First, I identified a couple of painpoints for my users.
 
 2. **Feels nervous when need to leave seat for food or washroom:** During the movie, users usually have to walk out and buy food and drink, and this can be an anxious experience.
 
-
-### User Flow
-With this in mind, I started to design the user flows and also made couple of storyboards to better understand how users will navigate this app.
-
-<Carousel showThumbs={false}>
-    <div>
-        <img src="/images/fortickets/UserFlow.png" />
-    </div>
-    
-</Carousel>
-
-<br/><br/>
 
 ### Storyboards
 
@@ -212,41 +204,6 @@ Finally, I created a hi-fi prototype using Figma.
 ### Flow 1
 
 <img
-  src="/images/fortickets/HiFiFlow1-resized.gif"
-  width="250"
-  style={{ float: "right" }}
-/>
-
-**Directly purchasing a ticket**
-
-User can directly purchase a ticket using this app.
-
-- User first chooses a movie on the home page.
-- Then they select their preferred seats.
-- After confirming their payment method, the ticket is purchased.
-- User can view the tickets on tickets page.
-
-{/* <img src="/images/fortickets/wallet.png" width="300" /> */}
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
-### Flow 2
-
-<img
   src="/images/fortickets/HiFiFlow2-resized.gif"
   width="250"
   style={{ float: "right" }}
@@ -280,7 +237,7 @@ User can also split their bill with their friends.
 <br />
 <br />
 
-### Flow 3
+### Flow 2
 
 <img
   src="/images/fortickets/HiFiFlow3-resized.gif"
@@ -311,6 +268,42 @@ User can share purchased tickets with others.
 <br />
 <br />
 <br />
+
+### Flow 3
+
+<img
+  src="/images/fortickets/HiFiFlow1-resized.gif"
+  width="250"
+  style={{ float: "right" }}
+/>
+
+**Directly purchasing a ticket**
+
+User can directly purchase a ticket using this app.
+
+- User first chooses a movie on the home page.
+- Then they select their preferred seats.
+- After confirming their payment method, the ticket is purchased.
+- User can view the tickets on tickets page.
+
+{/* <img src="/images/fortickets/wallet.png" width="300" /> */}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
 
 <br/><br/>
 
