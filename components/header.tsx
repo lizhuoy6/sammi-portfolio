@@ -39,13 +39,13 @@ const Header: React.FC = () => {
           <div
             className={`md:hidden ${
               mobileNavShown ? "left-0 opacity-50" : "-left-full opacity-0"
-            } fixed w-full h-full top-0 bg-black z-9 duration-300 transition-opacity`}
+            } fixed w-full h-screen top-0 bg-black z-50 duration-300 transition-opacity`}
             onClick={() => setMobileNavShown(false)}
           ></div>
           <div
             className={`md:hidden ${
               mobileNavShown ? "left-0" : "-left-full"
-            } fixed w-9/12 h-full top-0 bg-white z-10 transition-all duration-300`}
+            } fixed w-9/12 h-screen top-0 bg-white z-50 transition-all duration-300`}
           >
             <ul className={"pt-20 text-2xl"}>
               {NAVIGATION_ITEMS.map((item) => (

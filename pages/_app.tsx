@@ -23,7 +23,7 @@ const CustomH1 = (
 
   return (
     <h1
-      className="sticky top-20 z-50 bg-white pb-4 pt-4 mb-0 mt-0 pl-2 -ml-2"
+      className="sticky top-20 z-20 bg-white pb-4 pt-4 mb-0 mt-0 pl-2 -ml-2"
       id={id}
       {...props}
     />
