@@ -1,0 +1,113 @@
+import ProjectLayout from "../../layouts/project";
+import { Carousel } from 'react-responsive-carousel';
+
+export const meta = {
+  title: "Ucan",
+  author: "Zhuoying Li",
+  subtitles: [
+    "Course project for INF1602 - User Experience Design",
+  ],
+  figmaLink:
+    'https://www.figma.com/file/ZxdNity80N5AqEKQY8HdYI/INF1602-group-project?node-id=171%3A325&t=g9dkB0x6sUVglKii-1',
+  pdfLink: null,
+  sideImageLink: null,
+};
+
+# Project Overview
+
+Ucan is a mobile app that helps university students to find movitation to go to class.
+We achieve this by giving users a virtual plant they can grow.
+Each time the user achieves their goal (usually attending a class or event),
+they are awarded with crystals that makes their plant larger. It is a course project for INF1602 - User Experience Design.
+
+![](/images/ucan/photo.jpg)
+
+<br/><br/><br/>
+
+# Research
+
+Initially, we conducted interviews and surveys to understand the needs of university students.
+
+## Surveys
+
+We utilized Google Form that contained 10 multiple/single choice questions to collect data.
+In the end, we collected 17 responses. All participants are either undergraduate or
+graduate students at the University of Toronto.
+
+<div className="text-3xl text-bold py-6">Over 75% of respondents said they experience most negative emotions during winter.</div>
+
+![](/images/ucan/survey-1.png)
+
+
+<div className="text-3xl text-bold py-6">Most participants indicated that they have trouble participating activities that require them to go outside.</div>
+
+![](/images/ucan/survey-2.png)
+
+## Interviews
+
+We also conducted mutliple interviews with university students to understand their needs and pain points.
+
+After the interviews, we created an [affinity diagram](https://drive.google.com/file/d/1JXgODijrkSbgxs1_hXLvyR7kk_bxNd5F/view) to summarize the findings.
+
+- All participants said that winter is a lack of sunlight, which leads to more depressive feelings. 3 of them pointed out those factors that cause procrastination.
+- Eating comfort food, listening to music, reading books, and playing games are effective mitigating methods. Each of the terms was mentioned by at least 2 participants.
+- 7 participants stated that they generally overcome unpleasant emotions by talking to friends and family.
+- 8 out of 9 participants thought their coping methods were less effective in winter by comparing with the same method in other seasons.
+- When participants feel depressed, they are more willing to privately seek help online or reach out to family and friends. 3 participants tried to seek help from UofT mental health support resources.
+- All participants believe that the current UofT resource cannot support their negative feelings related to the winter season. 6 of them think UofT should better inform the available resources to students.
+
+<br/><br/><br/>
+
+# Design
+
+## Brainstorm & Storyboard
+
+We brainstormed and created a storyboard to better understand the user flow of the app. Following are our initial storyboards.
+
+<Carousel showThumbs={true}>
+    <div>
+        <img src="/images/ucan/storyboard-1.png" />
+    </div>
+    <div>
+        <img src="/images/ucan/storyboard-2.png" />
+    </div>
+    <div>
+        <img src="/images/ucan/storyboard-3.png" />
+    </div>
+</Carousel>
+
+## Mid-Fi Prototype
+
+We also created mid-fi prototype so we can better test our ideas.
+
+![](/images/ucan/mid-fi.png)
+
+You can find the prototype [here](https://www.figma.com/file/ZxdNity80N5AqEKQY8HdYI/INF1602-group-project?node-id=171%3A325&t=g9dkB0x6sUVglKii-1).
+
+<br/><br/><br/>
+
+# Evaluation
+
+After the mid-fi prototype, we conducted usability tests to verify our design. Following are some important results from the usability test sessions.
+
+We found that most users were satisfied with our overall design. However, we do have some issue with the reward system, as 40% of the users don't think it is enough to motivate them to attend classes.
+
+![](/images/ucan/test-1.png)
+
+![](/images/ucan/test-2.png)
+
+![](/images/ucan/test-3.png)
+
+<br/><br/><br/>
+
+# Next Steps
+
+- Adjust the reward system: to make user cares more about the rewards
+- Rethink of raising the virtual plant: are pets more attractive to users?
+- Make a connection between virtual plant and Can message functions, or reassess Can feature
+- Redesign event list and goal list so user doesn’t confuse the two
+
+
+export default ({ children }) => (
+  <ProjectLayout meta={meta}>{children}</ProjectLayout>
+);
