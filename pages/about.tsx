@@ -45,6 +45,7 @@ const Home: NextPage = () => {
                 Hi there, I&lsquo;m Sammi!
                 <br />
                 <b>tl;dr</b>: I am a UX designer in Toronto, Canada.
+                <br />I am also a photographer who enjoys analog photography.
                 {!showStage1 && (
                   <button
                     className="block pt-4 underline"
