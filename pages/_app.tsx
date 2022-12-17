@@ -7,6 +7,7 @@ import { DetailedHTMLProps, HTMLAttributes } from "react";
 import { renderToString } from "react-dom/server";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import mixpanel from "mixpanel-browser";
+import { withPasswordProtect } from "next-password-protect";
 
 mixpanel.init("94527584e70b5578ac073748c27bcdec", {
   debug: process.env.NODE_ENV !== "production",
@@ -44,4 +45,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+// Before: export default App;
+export default process.env.PASSWORD_PROTECT
+  ? withPasswordProtect(MyApp, {
+      // Options go here (optional)
+      loginApiUrl: "/api/login",
+      checkApiUrl: "/api/passwordCheck",
+    })
+  : MyApp;

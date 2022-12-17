@@ -18,6 +18,9 @@ const nextConfig = {
     domains: ["1stwebdesigner.com"],
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  env: {
+    PASSWORD_PROTECT: true,
+  },
 };
 
 module.exports = withMDX(nextConfig);
