@@ -19,7 +19,7 @@ const nextConfig = {
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   env: {
-    PASSWORD_PROTECT: true,
+    PASSWORD_PROTECT: false,
   },
 };
 
