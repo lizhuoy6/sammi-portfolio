@@ -18,12 +18,12 @@ export const projects: Project[] = [
     name: "ForTickets",
     coverImage: fortickets_thumbnail,
   },
-  {
-    id: "ucan",
-    projectType: "personal",
-    name: "Ucan",
-    coverImage: ucan_thumbnail,
-  },
+  // {
+  //   id: "ucan",
+  //   projectType: "personal",
+  //   name: "Ucan",
+  //   coverImage: ucan_thumbnail,
+  // },
   {
     id: "centro",
     projectType: "personal",
